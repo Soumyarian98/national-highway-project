@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { Html, useGLTF } from "@react-three/drei";
+import {
+  // Html,
+  useGLTF,
+} from "@react-three/drei";
 import { CatmullRomCurve3, Color, Vector3 } from "three";
 import gsap from "gsap";
-import { Button } from "./ui/button";
+// import { Button } from "./ui/button";
 
 const cameraMovement = [
   [0, 2.5, 0],
@@ -20,21 +23,21 @@ const cameraMovement = [
   [1763.662109375, 19.647567749023438, -180.705810546875],
 ];
 
-function Annotation({ children, ...props }: any) {
-  return (
-    <Html
-      {...props}
-      transform
-      occlude="blending"
-      geometry={<planeGeometry args={[10, 7.1, 10]} />}>
-      <div className="annotation" onClick={() => console.log(".")}>
-        {children}
-      </div>
-    </Html>
-  );
-}
+// function Annotation({ children, ...props }: any) {
+//   return (
+//     <Html
+//       {...props}
+//       transform
+//       occlude="blending"
+//       geometry={<planeGeometry args={[10, 7.1, 10]} />}>
+//       <div className="annotation" onClick={() => console.log(".")}>
+//         {children}
+//       </div>
+//     </Html>
+//   );
+// }
 
-function Model({ setSelectedId }: any) {
+function Model({}: any) {
   const { camera } = useThree();
   const [points, setPoints] = useState<Vector3[]>([]);
   const currentPointRef = useRef(0);
@@ -97,9 +100,9 @@ function Model({ setSelectedId }: any) {
     }
   }, [scene]);
 
-  const getAnnotationPosition = (position: Vector3) => {
-    return [position.x + 6, position.y + 1, position.z];
-  };
+  // const getAnnotationPosition = (position: Vector3) => {
+  //   return [position.x + 6, position.y + 1, position.z];
+  // };
 
   return (
     <>
@@ -109,7 +112,7 @@ function Model({ setSelectedId }: any) {
             <boxGeometry args={[10, 10, 10]} />
             <meshStandardMaterial color="red" />
           </mesh> */}
-          <Annotation
+          {/* <Annotation
             position={getAnnotationPosition(points[2])}
             rotation={[0, -Math.PI / 2, 0]}>
             <h1 className="text-3xl font-bold">Chainage (18+900)</h1>
@@ -118,7 +121,7 @@ function Model({ setSelectedId }: any) {
                 View Details
               </Button>
             </div>
-          </Annotation>
+          </Annotation> */}
           {/* <CatmullRomLine points={points} color="red" lineWidth={1} /> */}
         </>
       )}

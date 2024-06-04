@@ -16,7 +16,7 @@ function Model({ id }: { id: string }) {
   useEffect(() => {
     if (scene && allChildrenRef.current) {
       scene.children = allChildrenRef.current.filter(c => {
-        if (c.name === `chainage_${id}`) {
+        if (c.name === `chainage_${Number(id) + 1}`) {
           const boundingBox = new Box3().setFromObject(c);
           const center = new Vector3();
           boundingBox.getCenter(center);
@@ -49,7 +49,7 @@ const BridgeWithFilter = ({ id }: { id: string }) => {
       }}
       className="aspect-video"
       camera={{
-        position: [0, 20, 0],
+        position: [0, 50, 20],
         rotation: [0, -Math.PI * 0.5, 0],
       }}>
       <ambientLight intensity={4} />

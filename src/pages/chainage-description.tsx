@@ -12,6 +12,7 @@ import clsx from "clsx";
 import { Button } from "@/components/ui/button";
 
 const chainageData = [
+  { id: "0", label: "18+600 - 18+700", point: { left: 2, top: 82 } },
   { id: "1", label: "18+700 - 18+800", point: { left: 5, top: 79.18 } },
   { id: "2", label: "18+800 - 18+900", point: { left: 8.88, top: 75.63 } },
   { id: "3", label: "18+900 - 19+000", point: { left: 12.11, top: 73.09 } },
@@ -24,39 +25,34 @@ const chainageData = [
   { id: "10", label: "19+600 - 19+700", point: { left: 41.11, top: 46.7 } },
   {
     id: "11",
-    label: "19 + 700 - 19 + 800",
+    label: "19+700 - 19+800",
     point: { left: 45.77, top: 42.13 },
   },
   {
     id: "12",
-    label: "19 + 800 - 19 + 900",
+    label: "19+800 - 19+900",
     point: { left: 49.77, top: 38.83 },
   },
-  { id: "13", label: "19 + 900 - 20 + 000", point: { left: 54, top: 34.77 } },
+  { id: "13", label: "19+900 - 20+000", point: { left: 54, top: 34.77 } },
   {
     id: "14",
-    label: "20 + 000 - 20 + 100",
+    label: "20+000 - 20+100",
     point: { left: 58.11, top: 30.96 },
   },
   {
     id: "15",
-    label: "20 + 100 - 20 + 200",
+    label: "20+100 - 20+200",
     point: { left: 61.88, top: 27.66 },
   },
   {
     id: "16",
-    label: "20 + 200 - 20 + 300",
+    label: "20+200 - 20+300",
     point: { left: 65.66, top: 24.36 },
   },
   {
     id: "17",
-    label: "20 + 300 - 20 + 400",
+    label: "20+300 - 20+400",
     point: { left: 69.77, top: 20.56 },
-  },
-  {
-    id: "18",
-    label: "20 + 400 - 20 + 500",
-    point: { left: 74.55, top: 16.24 },
   },
 ];
 
