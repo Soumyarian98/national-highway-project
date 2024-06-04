@@ -13,7 +13,11 @@ import {
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "sonner";
+
+const sampleCredentials: { [key: string]: string } = {
+  "root@gmail.com": "password",
+};
 
 const formSchema = z.object({
   email: z.string().email().min(2).max(50).nonempty(),
@@ -31,8 +35,16 @@ function Login() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({ title: "Login Successful" });
+    if (!sampleCredentials[values.email]) {
+      toast.error("Invalid Email");
+      return;
+    }
+    if (sampleCredentials[values.email] !== values.password) {
+      toast.error("Invalid Password");
+      return;
+    }
+    toast.success("Login Successful");
+    localStorage.setItem("isLoggedIn", "true");
     navigate("/");
   }
   return (

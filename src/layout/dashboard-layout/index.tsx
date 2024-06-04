@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Sidebar from "./sidebar";
 import { FiMenu } from "react-icons/fi";
 import { useSidebar } from "@/hooks/use-sidebar";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { routeTitles } from "@/routes";
 import clsx from "clsx";
 
@@ -14,7 +14,9 @@ interface DashboardLayoutProps {
 const DashboardLayout = ({ children, contained }: DashboardLayoutProps) => {
   const { isOpen, toggleSidebar } = useSidebar();
   const location = useLocation();
+  const navigate = useNavigate();
   const currentPath = location.pathname;
+
   return (
     <div className="grid grid-cols-12 h-full">
       {isOpen && (
@@ -26,18 +28,29 @@ const DashboardLayout = ({ children, contained }: DashboardLayoutProps) => {
         <div className="flex items-center gap-4 p-4 border-b">
           <div
             className={clsx(
-              "flex items-center gap-4",
+              "flex items-center gap-4 justify-between",
               contained ? "w-[900px] mx-auto" : "w-full"
             )}>
-            {!isOpen && (
-              <Button size="sm" variant="default" onClick={toggleSidebar}>
-                <FiMenu />
-              </Button>
-            )}
-            <h1 className="text-3xl font-bold">
-              {/*@ts-ignore*/}
-              {routeTitles[currentPath]}
-            </h1>
+            <div className="flex items-center gap-4">
+              {!isOpen && (
+                <Button size="sm" variant="secondary" onClick={toggleSidebar}>
+                  <FiMenu />
+                </Button>
+              )}
+              <h1 className="text-3xl font-bold">
+                {/*@ts-ignore*/}
+                {routeTitles[currentPath]}
+              </h1>
+            </div>
+            <Button
+              size="sm"
+              variant="default"
+              onClick={() => {
+                localStorage.removeItem("isLoggedIn");
+                navigate("/login");
+              }}>
+              Logout
+            </Button>
           </div>
         </div>
         <div className="p-6">{children}</div>

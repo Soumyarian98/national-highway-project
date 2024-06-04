@@ -12,7 +12,7 @@ const Sidebar = () => {
   return (
     <div className="h-full flex flex-col gap-4 border-r">
       <div className="px-4 py-6 flex justify-end">
-        <Button size="sm" onClick={toggleSidebar}>
+        <Button size="sm" variant="secondary" onClick={toggleSidebar}>
           <FiX />
         </Button>
       </div>
