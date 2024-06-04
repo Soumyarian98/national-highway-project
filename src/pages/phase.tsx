@@ -105,7 +105,6 @@ const Phase = () => {
               src="https://utfs.io/f/11cddade-b126-47e7-a06f-6377081ec002-i0cmck.mp4"
               className="w-full h-auto rounded-lg"
               muted
-              autoPlay
               controls
             />
           </div>
