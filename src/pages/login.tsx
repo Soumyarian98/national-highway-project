@@ -99,7 +99,7 @@ function Login() {
       <div className="hidden lg:block overflow-hidden bg-muted/50">
         <div className="h-full flex flex-col items-center justify-center p-12">
           <div className="w-3/4 flex flex-col items-center">
-            <img alt="logo" src="/logo.png" />
+            <img alt="logo" src="/logo.png" className="w-2/4" />
             <p className="whitespace-nowrap text-3xl font-extrabold mt-4">
               National Highways Authority of India
             </p>
