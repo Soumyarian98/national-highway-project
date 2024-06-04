@@ -1,4 +1,5 @@
 import DetailsTable from "@/components/details-table";
+import { Button } from "@/components/ui/button";
 import DashboardLayout from "@/layout/dashboard-layout";
 import { useNavigate } from "react-router-dom";
 
@@ -92,6 +93,21 @@ const Phase = () => {
               concludes at the Chhattisgarh/Jharkhand border near Bemtatoli
               village in Kunkuri.
             </p>
+          </div>
+          <div>
+            <div className="flex justify-between items-center gap-4 mb-2">
+              <h2 className="text-lg capitalize font-bold">Project Demo</h2>
+              <Button size="sm" onClick={() => navigate("/timeline")}>
+                View Project Timeline
+              </Button>
+            </div>
+            <video
+              src="https://utfs.io/f/11cddade-b126-47e7-a06f-6377081ec002-i0cmck.mp4"
+              className="w-full h-auto rounded-lg"
+              muted
+              autoPlay
+              controls
+            />
           </div>
           <div className="space-y-4">
             <h2 className="text-lg capitalize font-bold">
