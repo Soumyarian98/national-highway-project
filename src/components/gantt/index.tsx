@@ -1,50 +1,72 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import { ganttData } from "./data";
 import { Task } from "./types";
 import LeftPanelContent from "./left-panel-content";
 import RightPanelContent from "./right-panel-content";
+import useGanttState from "./hook/use-gantt-state";
+import { Button } from "../ui/button";
+import { Expand, Minimize } from "lucide-react";
+import useRowState from "./hook/use-row-state";
 
 interface GanttProps {
   tasks: Task[];
 }
 
 const Gantt = ({ tasks }: GanttProps) => {
+  const { expandAll, collapseAll, setOpenCloseState } = useRowState();
+  const { rangeType, onRangeTypeChange } = useGanttState();
   const startDay = new Date("2024-05-25");
   const endDay = new Date("2025-01-01");
 
-  const getAllIds = (tasks: any) => {
-    let allTasks: any[] = [];
-    tasks.forEach((task: any) => {
-      if (task.subTasks.length > 0) {
-        allTasks = allTasks.concat(getAllIds(task.subTasks));
-      }
-      allTasks.push(task.id);
-    });
-    return allTasks.flat();
-  };
-
-  const [openCloseState, setOpenCloseState] = useState<{
-    [key: string]: boolean;
-  }>(
-    getAllIds(ganttData).reduce((acc, curr) => {
-      return { ...acc, [curr]: false };
-    }, {})
-  );
+  useEffect(() => {
+    const getAllIds = (tasks: any) => {
+      let allTasks: any[] = [];
+      tasks.forEach((task: any) => {
+        if (task.subTasks.length > 0) {
+          allTasks = allTasks.concat(getAllIds(task.subTasks));
+        }
+        allTasks.push(task.id);
+      });
+      return allTasks.flat();
+    };
+    setOpenCloseState(
+      getAllIds(ganttData).reduce((acc, curr) => {
+        return { ...acc, [curr]: false };
+      }, {})
+    );
+  }, []);
 
   return (
     <div className="w-full flex flex-col">
-      {/* <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mb-4">
         <h1 className="text-xl font-bold"></h1>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" onClick={expandAll}>
+            <Expand size={16} className="mr-2" />
+            Expand All
+          </Button>
+          <Button variant="ghost" onClick={collapseAll}>
+            <Minimize size={16} className="mr-2" />
+            Collpase All
+          </Button>
           <Select
-            value={zoomLevel}
-            onValueChange={v => setZoomLevel(v as "day" | "week" | "month")}>
+            value={rangeType}
+            onValueChange={v =>
+              onRangeTypeChange(v as "day" | "week" | "month")
+            }>
             <SelectTrigger className="w-[100px]">
               <SelectValue placeholder="Zoom Level" />
             </SelectTrigger>
@@ -55,20 +77,11 @@ const Gantt = ({ tasks }: GanttProps) => {
             </SelectContent>
           </Select>
         </div>
-      </div> */}
+      </div>
       <div className="w-full">
         <ResizablePanelGroup direction="horizontal" className="border">
           <ResizablePanel defaultSize={30}>
-            <LeftPanelContent
-              tasks={tasks}
-              rowCollapseState={openCloseState}
-              toggleRowCollapse={id =>
-                setOpenCloseState({
-                  ...openCloseState,
-                  [id]: !openCloseState[id],
-                })
-              }
-            />
+            <LeftPanelContent tasks={tasks} />
           </ResizablePanel>
           <ResizableHandle />
           <ResizablePanel>
@@ -76,7 +89,6 @@ const Gantt = ({ tasks }: GanttProps) => {
               tasks={tasks}
               startDay={startDay}
               endDay={endDay}
-              rowCollapseState={openCloseState}
             />
           </ResizablePanel>
         </ResizablePanelGroup>

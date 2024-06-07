@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/hooks/use-sidebar";
 import clsx from "clsx";
-import { FiX } from "react-icons/fi";
+import { X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
@@ -13,7 +13,7 @@ const Sidebar = () => {
     <div className="h-full flex flex-col gap-4 border-r">
       <div className="px-4 py-6 flex justify-end">
         <Button size="sm" variant="secondary" onClick={toggleSidebar}>
-          <FiX />
+          <X />
         </Button>
       </div>
       <div className="px-4 pb-6">

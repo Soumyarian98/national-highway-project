@@ -7,6 +7,8 @@ export const ganttData: Task[] = [
     title: "Customs and Port Office",
     startDate: "2024-06-01",
     endDate: "2024-09-30",
+    color: "red",
+    progress: 30,
     subTasks: [
       {
         id: "11",
@@ -22,6 +24,8 @@ export const ganttData: Task[] = [
             startDate: "2024-06-01",
             endDate: "2024-06-05",
             subTasks: [],
+            color: "green",
+            progress: 90,
           },
           {
             id: "112",

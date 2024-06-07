@@ -6,5 +6,8 @@ export interface Task {
   startDate: string;
   endDate: string;
 
+  color?: string;
+  progress?: number;
+
   subTasks: Task[];
 }

@@ -7,11 +7,16 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { ReactNode } from "react";
 
 interface Props {
   data: {
     header?: string[];
-    rows: (string | string[] | string[][])[][];
+    rows: (
+      | (string | ReactNode)
+      | (string | ReactNode)[]
+      | (string | ReactNode)[][]
+    )[][];
   };
 }
 

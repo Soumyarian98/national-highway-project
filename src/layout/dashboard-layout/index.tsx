@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import Sidebar from "./sidebar";
-import { FiMenu } from "react-icons/fi";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useLocation, useNavigate } from "react-router-dom";
 import { routeTitles } from "@/routes";
 import clsx from "clsx";
+import { Menu } from "lucide-react";
 
 interface DashboardLayoutProps {
   contained?: boolean;
@@ -34,7 +34,7 @@ const DashboardLayout = ({ children, contained }: DashboardLayoutProps) => {
             <div className="flex items-center gap-4">
               {!isOpen && (
                 <Button size="sm" variant="secondary" onClick={toggleSidebar}>
-                  <FiMenu />
+                  <Menu />
                 </Button>
               )}
               <h1 className="text-3xl font-bold">
