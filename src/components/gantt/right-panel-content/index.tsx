@@ -28,7 +28,7 @@ const RightPanelContent = ({
   startDay,
   tasks,
 }: RightPanelContentProps) => {
-  const { openCloseState } = useRowState();
+  const { rowCollapseState } = useRowState();
   const { rangeType } = useGanttState();
   const allDays = eachDayOfInterval({ start: startDay, end: endDay });
   const weeks = eachWeekOfInterval(
@@ -110,7 +110,7 @@ const RightPanelContent = ({
       <TableBody>
         <RightPanelRows
           rangeType={rangeType}
-          rowCollapseState={openCloseState}
+          rowCollapseState={rowCollapseState}
           startDay={startDay}
           tasks={tasks}
         />

@@ -1,35 +1,44 @@
 import { create } from "zustand";
 
 interface RowState {
-  openCloseState: { [key: string]: boolean };
+  rowCollapseState: { [key: string]: boolean };
   setOpenCloseState: (state: { [key: string]: boolean }) => void;
   expandAll: () => void;
   collapseAll: () => void;
-  tooggleRowCollapse: (id: string) => void;
+  toggleRowCollapse: (id: string) => void;
+  selectedRow: string;
 }
 
 const useRowState = create<RowState>(set => ({
-  openCloseState: {},
-  setOpenCloseState: state => set({ openCloseState: state }),
+  rowCollapseState: {},
+  setOpenCloseState: state => set({ rowCollapseState: state }),
   expandAll: () =>
     set(state => ({
-      openCloseState: Object.keys(state.openCloseState).reduce((acc, curr) => {
-        return { ...acc, [curr]: true };
-      }, {}),
+      rowCollapseState: Object.keys(state.rowCollapseState).reduce(
+        (acc, curr) => {
+          return { ...acc, [curr]: true };
+        },
+        {}
+      ),
     })),
   collapseAll: () =>
     set(state => ({
-      openCloseState: Object.keys(state.openCloseState).reduce((acc, curr) => {
-        return { ...acc, [curr]: false };
-      }, {}),
+      rowCollapseState: Object.keys(state.rowCollapseState).reduce(
+        (acc, curr) => {
+          return { ...acc, [curr]: false };
+        },
+        {}
+      ),
     })),
-  tooggleRowCollapse: id =>
+  toggleRowCollapse: id =>
     set(state => ({
-      openCloseState: {
-        ...state.openCloseState,
-        [id]: !state.openCloseState[id],
+      rowCollapseState: {
+        ...state.rowCollapseState,
+        [id]: !state.rowCollapseState[id],
       },
     })),
+
+  selectedRow: "",
 }));
 
 export default useRowState;

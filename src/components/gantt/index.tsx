@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   ResizableHandle,
   ResizablePanel,
@@ -18,18 +18,27 @@ import LeftPanelContent from "./left-panel-content";
 import RightPanelContent from "./right-panel-content";
 import useGanttState from "./hook/use-gantt-state";
 import { Button } from "../ui/button";
-import { Expand, Minimize } from "lucide-react";
+import { Expand, Minimize, Pen, Plus, Trash } from "lucide-react";
 import useRowState from "./hook/use-row-state";
+import useRowSelectState from "./hook/use-row-select-state";
+import TaskUpsertButton from "./toolbar/task-upsert-button";
+import useTasks from "./hook/use-tasks";
 
 interface GanttProps {
   tasks: Task[];
 }
 
-const Gantt = ({ tasks }: GanttProps) => {
+const Gantt = ({ tasks: initialTasks }: GanttProps) => {
+  const { tasks, setTasks } = useTasks();
+  const { selectedRow } = useRowSelectState();
   const { expandAll, collapseAll, setOpenCloseState } = useRowState();
   const { rangeType, onRangeTypeChange } = useGanttState();
   const startDay = new Date("2024-05-25");
   const endDay = new Date("2025-01-01");
+
+  useEffect(() => {
+    setTasks(initialTasks);
+  }, [initialTasks]);
 
   useEffect(() => {
     const getAllIds = (tasks: any) => {
@@ -52,16 +61,30 @@ const Gantt = ({ tasks }: GanttProps) => {
   return (
     <div className="w-full flex flex-col">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-xl font-bold"></h1>
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" onClick={expandAll}>
+        <div className="flex items-center">
+          <Button variant="ghost" onClick={expandAll} size="sm">
             <Expand size={16} className="mr-2" />
             Expand All
           </Button>
-          <Button variant="ghost" onClick={collapseAll}>
+          <Button variant="ghost" onClick={collapseAll} size="sm">
             <Minimize size={16} className="mr-2" />
             Collpase All
           </Button>
+          {selectedRow && (
+            <>
+              <TaskUpsertButton mode="add" tasks={tasks} />
+              <Button variant="ghost" size="sm">
+                <Pen size={16} className="mr-2" />
+                Edit Task
+              </Button>
+              <Button variant="ghost" size="sm">
+                <Trash size={16} className="mr-2" />
+                Delete
+              </Button>
+            </>
+          )}
+        </div>
+        <div className="flex items-center gap-2">
           <Select
             value={rangeType}
             onValueChange={v =>

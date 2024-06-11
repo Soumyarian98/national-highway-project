@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/table";
 import { Task } from "../types";
 import LeftPanelRows from "./left-panel-rows";
-import useRowState from "../hook/use-row-state";
 
 interface GanttProps {
   tasks: Task[];
@@ -18,7 +17,6 @@ interface GanttProps {
 }
 
 const LeftPanelContent = ({ tasks }: GanttProps) => {
-  const { tooggleRowCollapse, openCloseState } = useRowState();
   return (
     <Table>
       <TableHeader>
@@ -35,11 +33,7 @@ const LeftPanelContent = ({ tasks }: GanttProps) => {
         </TableRow>
       </TableHeader>
       <TableBody>
-        <LeftPanelRows
-          tasks={tasks}
-          rowCollapseState={openCloseState}
-          toggleRowCollapse={tooggleRowCollapse}
-        />
+        <LeftPanelRows tasks={tasks} />
       </TableBody>
     </Table>
   );
