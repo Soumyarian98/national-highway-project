@@ -10,6 +10,7 @@ import BridgeViewer from "@/components/bridge-viewer";
 import BridgeWithFilter from "@/components/bridge-with-filter";
 import clsx from "clsx";
 import { Button } from "@/components/ui/button";
+import ChainageDetails from "./chainage/[id]";
 
 const chainageData = [
   { id: "0", label: "18+600 - 18+700", point: { left: 2, top: 82 } },
@@ -67,7 +68,7 @@ const ChainageDescription = () => {
 
   return (
     <DashboardLayout contained>
-      <div className="mx-auto w-[900px]">
+      <div className="space-y-12">
         <div className="relative rounded-lg overflow-hidden">
           <img alt="map area" src="/map_area.png" />
           <TooltipProvider>
@@ -96,7 +97,7 @@ const ChainageDescription = () => {
             ))}
           </TooltipProvider>
         </div>
-        <div className="mt-8">
+        <div>
           {selectedChainage ? (
             <div>
               <div className="mb-4 flex justify-between items-center">
@@ -124,6 +125,7 @@ const ChainageDescription = () => {
             </div>
           )}
         </div>
+        {selectedChainageId === "11" && <ChainageDetails />}
       </div>
     </DashboardLayout>
   );

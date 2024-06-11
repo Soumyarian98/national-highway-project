@@ -1,6 +1,6 @@
 import DetailsTable from "@/components/details-table";
 import { minorBridgeQuantityCalculation } from "@/data/minor-bridge-quantity-calculation-data";
-import DashboardLayout from "@/layout/dashboard-layout";
+// import DashboardLayout from "@/layout/dashboard-layout";
 import {
   Accordion,
   AccordionContent,
@@ -50,8 +50,22 @@ const abstractCostEstimate = {
 
 const ChainageDetails = () => {
   return (
-    <DashboardLayout contained title="20+368">
+    <>
       <div className="space-y-12">
+        {/* <div>
+          <div className="relative rounded-lg overflow-hidden">
+            <img alt="map area" src="/map_area.png" />
+            <div
+              className="absolute flex justify-center items-center rounded-full"
+              style={{
+                left: "45.77%",
+                top: "42.13%",
+                transform: "translate(-50%, -50%)",
+              }}>
+              <div className="w-3 h-3 border-2 border-white rounded-full bg-red-700 scale-150"></div>
+            </div>
+          </div>
+        </div> */}
         <div>
           <h2 className="text-lg capitalize font-bold mb-4">
             Cost estimation assumptions for minor bridge at 20+368
@@ -77,11 +91,18 @@ const ChainageDetails = () => {
             Cost estimate for minor bridge at 20+368
           </h2>
           <div className="space-y-6">
-            <Accordion type="multiple">
+            <Accordion
+              type="multiple"
+              defaultValue={new Array(minorBridgeQuantityCalculation.length)
+                .fill("0")
+                .map((_, index) => index.toString())}>
               {minorBridgeQuantityCalculation.map((data, index) => (
                 <AccordionItem key={index} value={index.toString()}>
                   <AccordionTrigger className="text-left text-sm hover:no-underline">
-                    {index + 1}. {data.title}
+                    <div className="flex gap-4 items-center">
+                      <div className="font-bold aspect-square">{index + 1}</div>
+                      <div>{data.title}</div>
+                    </div>
                   </AccordionTrigger>
                   <AccordionContent>
                     <DetailsTable data={data.tableData} />
@@ -92,7 +113,7 @@ const ChainageDetails = () => {
           </div>
         </div>
       </div>
-    </DashboardLayout>
+    </>
   );
 };
 

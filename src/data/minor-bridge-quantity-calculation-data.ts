@@ -1,13 +1,11 @@
 export const minorBridgeQuantityCalculation = [
   {
-    title: `Excavation for Structures
-            Earth work in excavation of foundation of structures as per
-            drawing and technical specification, including setting out,
+    title: `Excavation for Structures Earth work in excavation of foundation of structures as per drawing and technical specification, including setting out,
             construction of shoring and bracing, removal of stumps and other
             deleterious matter, dressing of sides and bottom and backfilling
             with approved material. as per relevant clauses of section 300 &
             2100 in\n
-            (B) Mechanical Means]\n
+            (B) Mechanical Means\n
             (i) thickness upto 3 m`,
     tableData: {
       header: [
@@ -198,6 +196,209 @@ technical specifications and as per relevant clause of section 1600.`,
         ["Parapet Wall", "cum", 4, 15, 0.5, 3, 150],
         ["Total", "", "", "", "", "", 12, 150, 1800],
       ],
+    },
+  },
+  {
+    title: `PCC M15 Grade leveling course below approach slab complete as
+per drawing and Technical specification and as per relevant
+clauses of section 1700.`,
+    tableData: {
+      header: [
+        "",
+        "Unit",
+        "Nos",
+        "Length",
+        "Breadth",
+        "Height",
+        "Quantity",
+        "Rate",
+        "Amount",
+      ],
+      rows: [["", "cum", 1, 15.2, 3.7, 0.1, 5.624, 4943.0, 27799.432]],
+    },
+  },
+  {
+    title: `Reinforced cement concrete approach slab (Grade of concrere M
+30) including reinforcement and formwork complete as per
+drawing and Technical specification and as per relevant clauses
+of section 1500, 1600, 1700 and clause 2704 of specifications.`,
+    tableData: {
+      header: [
+        "",
+        "Unit",
+        "Nos",
+        "Length",
+        "Breadth",
+        "Height",
+        "Quantity",
+        "Rate",
+        "Amount",
+      ],
+      rows: [["", "cum", 1, 15, 3.5, 0.3, 15.75, 10922.0, 172021.5]],
+    },
+  },
+  {
+    title: `Providing and laying Cement concrete wearing coat M-30 grade
+including reinforcement complete as per drawing and Technical
+Specifications and as per relevant clauses of sections 1500, 1700
+and Clause 2702 of specifications.`,
+    tableData: {
+      header: [
+        "",
+        "Unit",
+        "Nos",
+        "Length",
+        "Breadth",
+        "Height",
+        "Quantity",
+        "Rate",
+        "Amount",
+      ],
+      rows: [["", "cum", 1, 15, 5.1, 0.075, 57.375, 12463.0, 715064.625]],
+    },
+  },
+  {
+    title: `Providing weep holes in Brick masonry /Plain /Reinforced
+concrete abutment, wing wall/return wall with 100 mm dia
+AC/PVC pipe, extending through the full width of the structure
+with slope of 1V :20H towards drawing foce. Complete as per
+drawing and Technical specifications`,
+    tableData: {
+      header: [
+        "",
+        "Unit",
+        "Nos",
+        "Length",
+        "Breadth",
+        "Height",
+        "Quantity",
+        "Rate",
+        "Amount",
+      ],
+
+      rows: [
+        ["Box", "No", 1, 4, "", "", 4],
+        ["RE WALL", "No", 1, 4, "", "", 4],
+        ["Total", "", "", "", "", 8, 375.0, 3000.0],
+      ],
+    },
+  },
+  {
+    title: `Providing and laying of Filter media with granular
+materials/stone crushed aggregates satisfying the requirements
+laid down in clause 2504.2.2 of MoRTH specifications to a
+thickness of not less than 600 mm with smaller size towards the
+soil and bigger size towards the wall and provided over the entire
+surface behind abutment, wing wall and return wall to the full
+height compacted to a firm condition complete as per drawing
+and technical specification.`,
+    tableData: {
+      header: [
+        "",
+        "Unit",
+        "Nos",
+        "Length",
+        "Breadth",
+        "Height",
+        "Quantity",
+        "Rate",
+        "Amount",
+      ],
+      rows: [
+        ["Box", "cum", 1, 15, 0.6, 5.65, 50.85],
+        ["RE WALL", "cum", 1, 1, 0.6, 6.85, 4.11],
+        ["Total", "", "", "", "", 54.96, 1622.0, 89145.12],
+      ],
+    },
+  },
+  {
+    title: `Flexible Apron :Construction of flexible apron 1 m thick
+comprising of loose stone boulders weighing not less than 40 kg
+beyond curtain wall.`,
+    tableData: {
+      header: [
+        "",
+        "Unit",
+        "Nos",
+        "Length",
+        "Breadth",
+        "Height",
+        "Quantity",
+        "Rate",
+        "Amount",
+      ],
+      rows: [
+        ["U/S", "cum", 1, 3, 11, 0.75, 24.75],
+        ["D/S", "cum", 1, 6, 11, 0.75, 49.5],
+        ["Total", "", "", "", "", 74.25, 2423.0, 179907.75],
+      ],
+    },
+  },
+  {
+    title: `Filler joint
+Providing & fixing 20 mm thick compressible fibre board in
+expansion joint complete as per drawing & Technical
+Specification.`,
+    tableData: {
+      header: [
+        "",
+        "Unit",
+        "Nos",
+        "Length",
+        "Breadth",
+        "Height",
+        "Quantity",
+        "Rate",
+        "Amount",
+      ],
+      rows: [["", "Rmt", 1, 15, "", 15, 262.0, 3930.0]],
+    },
+  },
+  {
+    title: `Reinforced Cement Concrete Crash Barrier
+Provision of an Reinforced cement concrete crash barrier at the
+edges of the road, approaches to bridge structures and medians,
+constructed with M-20 grade concrete with HYSD reinforcement
+conforming to IRC:21 and dowel bars 25 mm dia, 450 mm long at
+expansion joints filled with pre-moulded asphalt filler board,
+keyed to the structure on which it is built and installed as per
+design given in the enclosure to MOST circular No. RW/NH -
+33022/1/94-DO III dated 24 June 1994 as per dimensions in the
+approved drawing
+and at locations directed by the Engineer, all as specified.`,
+    tableData: {
+      header: [
+        "",
+        "Unit",
+        "Nos",
+        "Length",
+        "Breadth",
+        "Height",
+        "Quantity",
+        "Rate",
+        "Amount",
+      ],
+      rows: [["", "Rmt", 1, 11, "", 11, 3970.0, 43670.0]],
+    },
+  },
+  {
+    title: `Back filling behind abutment, wing wall and return wall complete
+as per drawing and Technical specification and as per relevant
+clauses 305 of specifications and as per appendix 6 of IRC-78.
+A Granular material`,
+    tableData: {
+      header: [
+        "",
+        "Unit",
+        "Nos",
+        "Length",
+        "Breadth",
+        "Height",
+        "Quantity",
+        "Rate",
+        "Amount",
+      ],
+      rows: [["", "cum", 1, 44, 30, 11.7, 1544, 318.0, 4911192.0]],
     },
   },
 ];

@@ -117,7 +117,6 @@ const Phase = () => {
             </h2>
             <DetailsTable data={gradeSeparatedStructuresData} />
           </div>
-
           <div className="space-y-4">
             <h2 className="text-lg capitalize font-bold">
               Details of settlements
@@ -127,6 +126,21 @@ const Phase = () => {
           <div className="space-y-4">
             <h2 className="text-lg capitalize font-bold">RoW Details</h2>
             <DetailsTable data={forestDetails} />
+          </div>
+          <div>
+            <img alt="1" className="w-full h-auto" src="/1.png" />
+          </div>
+          <div>
+            <img alt="1" className="w-full h-auto" src="/2.png" />
+          </div>
+          <div>
+            <img alt="1" className="w-full h-auto" src="/3.png" />
+          </div>
+          <div>
+            <img alt="1" className="w-full h-auto" src="/4.png" />
+          </div>
+          <div>
+            <img alt="1" className="w-full h-auto" src="/5.png" />
           </div>
         </div>
       </div>
