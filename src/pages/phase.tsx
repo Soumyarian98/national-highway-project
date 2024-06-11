@@ -2,7 +2,6 @@ import DetailsTable from "@/components/details-table";
 import { Button } from "@/components/ui/button";
 import VideoPlayer from "@/components/video-player";
 import DashboardLayout from "@/layout/dashboard-layout";
-import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const gradeSeparatedStructuresData = {

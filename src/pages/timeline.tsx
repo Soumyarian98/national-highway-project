@@ -3,7 +3,6 @@
 
 import Gantt from "@/components/gantt";
 import { ganttData } from "@/components/gantt/data";
-import { constructionProgramData } from "@/components/gantt/new-data";
 import { Task } from "@/components/gantt/types";
 import LoadingIndicator from "@/components/loading-indicator";
 import DashboardLayout from "@/layout/dashboard-layout";

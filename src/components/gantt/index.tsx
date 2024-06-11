@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   ResizableHandle,
   ResizablePanel,
@@ -18,7 +18,7 @@ import LeftPanelContent from "./left-panel-content";
 import RightPanelContent from "./right-panel-content";
 import useGanttState from "./hook/use-gantt-state";
 import { Button } from "../ui/button";
-import { Expand, Minimize, Pen, Plus, Trash } from "lucide-react";
+import { Expand, Minimize } from "lucide-react";
 import useRowState from "./hook/use-row-state";
 import useRowSelectState from "./hook/use-row-select-state";
 import TaskUpsertButton from "./toolbar/task-upsert-button";
