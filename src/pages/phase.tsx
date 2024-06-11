@@ -1,6 +1,8 @@
 import DetailsTable from "@/components/details-table";
 import { Button } from "@/components/ui/button";
+import VideoPlayer from "@/components/video-player";
 import DashboardLayout from "@/layout/dashboard-layout";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const gradeSeparatedStructuresData = {
@@ -63,6 +65,13 @@ const forestDetails = {
 const Phase = () => {
   const navigate = useNavigate();
 
+  // const segments = [
+  //   { label: "Introduction", startTime: 0, endTime: 60 },
+  //   { label: "Problem", startTime: 60, endTime: 150 },
+  //   { label: "Solution", startTime: 150, endTime: 240 },
+  //   { label: "Conclusion", startTime: 240, endTime: 300 },
+  // ];
+
   return (
     <DashboardLayout contained>
       <div className="max-w-[900px] mx-auto">
@@ -101,12 +110,7 @@ const Phase = () => {
                 View Project Timeline
               </Button>
             </div>
-            <video
-              src="https://utfs.io/f/11cddade-b126-47e7-a06f-6377081ec002-i0cmck.mp4"
-              className="w-full h-auto rounded-lg"
-              muted
-              controls
-            />
+            <VideoPlayer src="https://utfs.io/f/11cddade-b126-47e7-a06f-6377081ec002-i0cmck.mp4" />
           </div>
           <div className="space-y-4">
             <h2 className="text-lg capitalize font-bold">
