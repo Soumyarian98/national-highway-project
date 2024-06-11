@@ -3,6 +3,7 @@
 
 import Gantt from "@/components/gantt";
 import { ganttData } from "@/components/gantt/data";
+import { constructionProgramData } from "@/components/gantt/new-data";
 import { Task } from "@/components/gantt/types";
 import LoadingIndicator from "@/components/loading-indicator";
 import DashboardLayout from "@/layout/dashboard-layout";
@@ -28,7 +29,7 @@ const Timeline = () => {
           <LoadingIndicator className="size-12 text-primary" />
         </div>
       )}
-      {data && <Gantt tasks={data} />}
+      {data && <Gantt tasks={constructionProgramData} />}
     </DashboardLayout>
   );
 };
