@@ -40,7 +40,6 @@ const RightPanelRows = ({
         ? differenceInWeeks(startDay, new Date(g.startDate))
         : differenceInCalendarMonths(startDay, new Date(g.startDate));
 
-    console.log(startGap);
     const duration =
       rangeType === "day"
         ? differenceInDays(new Date(g.startDate), new Date(g.endDate))
@@ -54,11 +53,11 @@ const RightPanelRows = ({
     const tooltipData = [
       {
         label: "Start Date",
-        value: format(new Date(g.startDate), "dd-MM-yyyy"),
+        value: format(new Date(g.startDate), "PP"),
       },
       {
         label: "End Date",
-        value: format(new Date(g.endDate), "dd-MM-yyyy"),
+        value: format(new Date(g.endDate), "PP"),
       },
       {
         label: "Duration",

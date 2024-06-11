@@ -1,7 +1,9 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { users } from "./user-data";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Search } from "lucide-react";
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Checkbox } from "@/components/ui/checkbox";
+
+import { users } from "../user-data";
 
 const ResourcesTabContent = () => {
   return (

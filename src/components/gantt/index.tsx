@@ -23,6 +23,7 @@ import useRowState from "./hook/use-row-state";
 import useRowSelectState from "./hook/use-row-select-state";
 import TaskUpsertButton from "./toolbar/task-upsert-button";
 import useTasks from "./hook/use-tasks";
+import TaskDeleteButton from "./toolbar/task-delete-button";
 
 interface GanttProps {
   tasks: Task[];
@@ -72,15 +73,9 @@ const Gantt = ({ tasks: initialTasks }: GanttProps) => {
           </Button>
           {selectedRow && (
             <>
-              <TaskUpsertButton mode="add" tasks={tasks} />
-              <Button variant="ghost" size="sm">
-                <Pen size={16} className="mr-2" />
-                Edit Task
-              </Button>
-              <Button variant="ghost" size="sm">
-                <Trash size={16} className="mr-2" />
-                Delete
-              </Button>
+              <TaskUpsertButton mode="add" />
+              <TaskUpsertButton mode="edit" />
+              <TaskDeleteButton />
             </>
           )}
         </div>

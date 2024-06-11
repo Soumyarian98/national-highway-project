@@ -9,7 +9,6 @@ import { Input } from "@/components/ui/input";
 import DatePicker from "@/components/date-picker";
 import { Textarea } from "@/components/ui/textarea";
 import { UpersertTaskFormType } from ".";
-import { format } from "date-fns";
 
 interface Props {
   form: UpersertTaskFormType;
@@ -23,7 +22,7 @@ const GeneralTabContent = ({ form }: Props) => {
           control={form.control}
           name="title"
           render={({ field }) => (
-            <FormItem className="space-y-1">
+            <FormItem>
               <FormLabel>Title</FormLabel>
               <FormControl>
                 <Input {...field} />
@@ -38,7 +37,7 @@ const GeneralTabContent = ({ form }: Props) => {
           control={form.control}
           name="description"
           render={({ field }) => (
-            <FormItem className="space-y-1">
+            <FormItem>
               <FormLabel>Description</FormLabel>
               <FormControl>
                 <Textarea {...field} />
@@ -52,7 +51,7 @@ const GeneralTabContent = ({ form }: Props) => {
         control={form.control}
         name="startDate"
         render={({ field }) => (
-          <FormItem className="space-y-1">
+          <FormItem>
             <FormLabel>Start Date</FormLabel>
             <FormControl className="mt-0">
               <DatePicker
@@ -68,7 +67,7 @@ const GeneralTabContent = ({ form }: Props) => {
         control={form.control}
         name="endDate"
         render={({ field }) => (
-          <FormItem className="space-y-1">
+          <FormItem>
             <FormLabel>End Date</FormLabel>
             <FormControl>
               <DatePicker

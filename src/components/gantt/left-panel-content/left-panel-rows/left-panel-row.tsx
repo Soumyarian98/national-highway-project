@@ -66,10 +66,10 @@ const LeftPanelRow = ({
       </td>
       <td className="whitespace-nowrap text-sm px-2">{title}</td>
       <td className="whitespace-nowrap text-sm px-2">
-        {format(new Date(startDate), "dd-MM-yyyy")}
+        {format(new Date(startDate), "PP")}
       </td>
       <td className="whitespace-nowrap text-sm px-2">
-        {format(new Date(endDate), "dd-MM-yyyy")}
+        {format(new Date(endDate), "PP")}
       </td>
     </TableRow>
   );
