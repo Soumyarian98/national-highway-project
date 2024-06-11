@@ -9,9 +9,14 @@ import { Menu } from "lucide-react";
 interface DashboardLayoutProps {
   contained?: boolean;
   children: React.ReactNode | React.ReactNode[];
+  title?: string;
 }
 
-const DashboardLayout = ({ children, contained }: DashboardLayoutProps) => {
+const DashboardLayout = ({
+  children,
+  contained,
+  title,
+}: DashboardLayoutProps) => {
   const { isOpen, toggleSidebar } = useSidebar();
   const location = useLocation();
   const navigate = useNavigate();
@@ -39,7 +44,7 @@ const DashboardLayout = ({ children, contained }: DashboardLayoutProps) => {
               )}
               <h1 className="text-3xl font-bold">
                 {/*@ts-ignore*/}
-                {routeTitles[currentPath]}
+                {routeTitles[currentPath] ? routeTitles[currentPath] : title}
               </h1>
             </div>
             <Button
@@ -53,7 +58,13 @@ const DashboardLayout = ({ children, contained }: DashboardLayoutProps) => {
             </Button>
           </div>
         </div>
-        <div className="p-6">{children}</div>
+        <div
+          className={clsx(
+            "p-6",
+            contained ? "max-w-[900px] mx-auto lg:px-0" : "w-full"
+          )}>
+          {children}
+        </div>
       </div>
     </div>
   );
