@@ -142,39 +142,39 @@ const ChainageDescription = () => {
               <h2 className="text-lg capitalize font-bold">MNB at 20+368</h2>
             </div>
             <VideoPlayer
-              segments={[
-                { label: "Escavation", startTime: 0, endTime: 23 },
-                { label: "PCC", startTime: 23, endTime: 33 },
-                {
-                  label:
-                    "Supplying, sitting and placing HYSD bar reinforcement",
-                  startTime: 33,
-                  endTime: 41,
-                },
-                {
-                  label:
-                    "Foundation, substructure and superstructure in concrete",
-                  startTime: 41,
-                  endTime: 58,
-                },
-                {
-                  label: "Re-wall, retaining wall etc.",
-                  startTime: 58,
-                  endTime: 98,
-                },
-                {
-                  label: "Roadworks",
-                  startTime: 98,
-                  endTime: 106,
-                },
-                {
-                  label:
-                    "Back filling behind abutment, wing wall and return wall",
-                  startTime: 106,
-                  endTime: 120,
-                },
-              ]}
-              src="https://utfs.io/f/c1da456b-3070-416b-bbef-3d54030c7392-68niqt.mp4"
+              // segments={[
+              //   { label: "Escavation", startTime: 0, endTime: 23 },
+              //   { label: "PCC", startTime: 23, endTime: 33 },
+              //   {
+              //     label:
+              //       "Supplying, sitting and placing HYSD bar reinforcement",
+              //     startTime: 33,
+              //     endTime: 41,
+              //   },
+              //   {
+              //     label:
+              //       "Foundation, substructure and superstructure in concrete",
+              //     startTime: 41,
+              //     endTime: 58,
+              //   },
+              //   {
+              //     label: "Re-wall, retaining wall etc.",
+              //     startTime: 58,
+              //     endTime: 98,
+              //   },
+              //   {
+              //     label: "Roadworks",
+              //     startTime: 98,
+              //     endTime: 106,
+              //   },
+              //   {
+              //     label:
+              //       "Back filling behind abutment, wing wall and return wall",
+              //     startTime: 106,
+              //     endTime: 120,
+              //   },
+              // ]}
+              src="https://utfs.io/f/7b5b554f-f6ed-4df1-9049-fdd49c4cc012-qy2kap.mp4"
             />
           </div>
         )}
