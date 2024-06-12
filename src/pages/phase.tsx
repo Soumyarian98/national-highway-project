@@ -105,9 +105,6 @@ const Phase = () => {
           <div>
             <div className="flex justify-between items-center gap-4 mb-2">
               <h2 className="text-lg capitalize font-bold">Project Demo</h2>
-              <Button size="sm" onClick={() => navigate("/timeline")}>
-                View Project Timeline
-              </Button>
             </div>
             <VideoPlayer src="https://utfs.io/f/11cddade-b126-47e7-a06f-6377081ec002-i0cmck.mp4" />
           </div>

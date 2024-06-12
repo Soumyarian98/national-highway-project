@@ -11,6 +11,8 @@ import BridgeWithFilter from "@/components/bridge-with-filter";
 import clsx from "clsx";
 import { Button } from "@/components/ui/button";
 import ChainageDetails from "./chainage/[id]";
+import { useNavigate } from "react-router-dom";
+import VideoPlayer from "@/components/video-player";
 
 const chainageData = [
   { id: "0", label: "18+600 - 18+700", point: { left: 2, top: 82 } },
@@ -61,6 +63,7 @@ const ChainageDescription = () => {
   const [selectedChainageId, setSelectedChainageId] = useState<
     string | undefined
   >();
+  const navigate = useNavigate();
 
   const selectedChainage = useMemo(() => {
     return chainageData.find(chain => chain.id === selectedChainageId);
@@ -104,11 +107,19 @@ const ChainageDescription = () => {
                 <h2 className="text-lg capitalize font-bold">
                   {selectedChainage.label}
                 </h2>
-                <Button
-                  onClick={() => setSelectedChainageId(undefined)}
-                  size="sm">
-                  Reset
-                </Button>
+                <div className="flex gap-2">
+                  <Button
+                    onClick={() => setSelectedChainageId(undefined)}
+                    size="sm"
+                    variant="outline">
+                    Reset
+                  </Button>
+                  <Button
+                    size="sm"
+                    onClick={() => navigate("/chainage-timeline")}>
+                    View Project Timeline
+                  </Button>
+                </div>
               </div>
               <div>
                 <BridgeWithFilter id={selectedChainageId!} />
@@ -125,7 +136,49 @@ const ChainageDescription = () => {
             </div>
           )}
         </div>
-        {selectedChainageId === "11" && <ChainageDetails />}
+        {selectedChainageId === "17" && (
+          <div>
+            <div className="flex justify-between items-center gap-4 mb-2">
+              <h2 className="text-lg capitalize font-bold">MNB at 20+368</h2>
+            </div>
+            <VideoPlayer
+              segments={[
+                { label: "Escavation", startTime: 0, endTime: 23 },
+                { label: "PCC", startTime: 23, endTime: 33 },
+                {
+                  label:
+                    "Supplying, sitting and placing HYSD bar reinforcement",
+                  startTime: 33,
+                  endTime: 41,
+                },
+                {
+                  label:
+                    "Foundation, substructure and superstructure in concrete",
+                  startTime: 41,
+                  endTime: 58,
+                },
+                {
+                  label: "Re-wall, retaining wall etc.",
+                  startTime: 58,
+                  endTime: 98,
+                },
+                {
+                  label: "Roadworks",
+                  startTime: 98,
+                  endTime: 106,
+                },
+                {
+                  label:
+                    "Back filling behind abutment, wing wall and return wall",
+                  startTime: 106,
+                  endTime: 120,
+                },
+              ]}
+              src="https://utfs.io/f/c1da456b-3070-416b-bbef-3d54030c7392-68niqt.mp4"
+            />
+          </div>
+        )}
+        {selectedChainageId === "17" && <ChainageDetails />}
       </div>
     </DashboardLayout>
   );
