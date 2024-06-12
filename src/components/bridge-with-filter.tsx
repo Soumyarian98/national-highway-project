@@ -44,6 +44,15 @@ function Model({ id }: { id: string }) {
 const BridgeWithFilter = ({ id }: { id: string }) => {
   return (
     <Canvas
+      gl={{
+        // @ts-ignore
+        shadowMap: {
+          enabled: true,
+          autoUpdate: true,
+          // type: PCFShadowMap,
+          // needsUpdate: true,
+        },
+      }}
       scene={{
         background: new Color(0xd9f7ff),
       }}
@@ -52,7 +61,14 @@ const BridgeWithFilter = ({ id }: { id: string }) => {
         position: [0, 50, 20],
         rotation: [0, -Math.PI * 0.5, 0],
       }}>
-      <ambientLight intensity={4} />
+      <ambientLight intensity={1.5} castShadow={true} />
+
+      <directionalLight
+        position={[0, 20, 20]}
+        intensity={1}
+        castShadow={true}
+      />
+
       <Model id={id} />
       <OrbitControls />
     </Canvas>

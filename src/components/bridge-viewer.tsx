@@ -4,7 +4,7 @@ import {
   // Html,
   useGLTF,
 } from "@react-three/drei";
-import { CatmullRomCurve3, Color, Vector3 } from "three";
+import { CatmullRomCurve3, Color, PCFShadowMap, Vector3 } from "three";
 import gsap from "gsap";
 // import { Button } from "./ui/button";
 
@@ -133,6 +133,15 @@ function Model({}: any) {
 const BridgeViewer = ({ setSelectedId }: any) => {
   return (
     <Canvas
+      gl={{
+        // @ts-ignore
+        shadowMap: {
+          enabled: true,
+          autoUpdate: true,
+          type: PCFShadowMap,
+          // needsUpdate: true,
+        },
+      }}
       scene={{
         background: new Color(0xd9f7ff),
       }}
@@ -141,7 +150,7 @@ const BridgeViewer = ({ setSelectedId }: any) => {
         position: [0, 6, 0],
         rotation: [0, -Math.PI * 0.5, 0],
       }}>
-      <ambientLight intensity={4} />
+      <ambientLight intensity={4} castShadow={true} />
       <Model setSelectedId={setSelectedId} />
       {/* <OrbitControls /> */}
     </Canvas>
