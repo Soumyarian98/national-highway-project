@@ -1,5 +1,4 @@
 import DetailsTable from "@/components/details-table";
-import { Button } from "@/components/ui/button";
 import VideoPlayer from "@/components/video-player";
 import DashboardLayout from "@/layout/dashboard-layout";
 import { useNavigate } from "react-router-dom";
