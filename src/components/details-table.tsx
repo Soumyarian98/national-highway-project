@@ -46,7 +46,8 @@ const DetailsTable = ({ data }: Props) => {
                             return (
                               <li
                                 key={index}
-                                className="flex justify-between items-center mb-1">
+                                className="flex justify-between items-center mb-1"
+                              >
                                 <span>
                                   {index + 1}. {item[0]}
                                 </span>

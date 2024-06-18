@@ -105,7 +105,7 @@ const Phase = () => {
             <div className="flex justify-between items-center gap-4 mb-2">
               <h2 className="text-lg capitalize font-bold">Project Demo</h2>
             </div>
-            <VideoPlayer src="https://utfs.io/f/11cddade-b126-47e7-a06f-6377081ec002-i0cmck.mp4" />
+            <VideoPlayer src="https://utfs.io/f/ec4954a7-38a6-43db-8fd8-381c15f2bd7c-18qyia.m4v" />
           </div>
           <div className="space-y-4">
             <h2 className="text-lg capitalize font-bold">
