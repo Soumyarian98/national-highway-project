@@ -1,5 +1,5 @@
 import DashboardLayout from "@/layout/dashboard-layout";
-import { Suspense, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import {
   Tooltip,
   TooltipContent,
@@ -13,7 +13,6 @@ import { Button } from "@/components/ui/button";
 import ChainageDetails from "./chainage/[id]";
 import { useNavigate } from "react-router-dom";
 import VideoPlayer from "@/components/video-player";
-import LoadingIndicator from "@/components/loading-indicator";
 
 const chainageData = [
   { id: "0", label: "18+600 - 18+700", point: { left: 2, top: 82 } },
