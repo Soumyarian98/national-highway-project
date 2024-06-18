@@ -483,14 +483,6 @@ export const constructionProgramData: Task[] = [
         endDate: "2025-02-11",
         subTasks: [],
       },
-      {
-        id: "62",
-        parentPath: ["38"],
-        title: "Project Completion",
-        startDate: "2025-02-11",
-        endDate: "2025-02-11",
-        subTasks: [],
-      },
     ],
   },
 ];
