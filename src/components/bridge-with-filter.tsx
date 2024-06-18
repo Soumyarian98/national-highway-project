@@ -1,7 +1,18 @@
-import { useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { Html, OrbitControls, useGLTF, useProgress } from "@react-three/drei";
 import { Box3, Color, Object3D, Vector3 } from "three";
+
+function Loader() {
+  const { progress } = useProgress();
+  return (
+    <Html center>
+      <div className="aspect-video whitespace-nowrap w-full h-full rounded-md px-4 flex justify-center items-center text-primary rounded-br-md bg-white">
+        Loading - {progress.toFixed(0)} %
+      </div>
+    </Html>
+  );
+}
 
 function Model({ id }: { id: string }) {
   const { scene } = useGLTF("/full_road_1.glb");
@@ -15,7 +26,7 @@ function Model({ id }: { id: string }) {
 
   useEffect(() => {
     if (scene && allChildrenRef.current) {
-      scene.children = allChildrenRef.current.filter(c => {
+      scene.children = allChildrenRef.current.filter((c) => {
         if (c.name === `chainage_${Number(id) + 1}`) {
           const boundingBox = new Box3().setFromObject(c);
           const center = new Vector3();
@@ -60,17 +71,18 @@ const BridgeWithFilter = ({ id }: { id: string }) => {
       camera={{
         position: [0, 50, 20],
         rotation: [0, -Math.PI * 0.5, 0],
-      }}>
-      <ambientLight intensity={1.5} castShadow={true} />
-
-      <directionalLight
-        position={[0, 20, 20]}
-        intensity={1}
-        castShadow={true}
-      />
-
-      <Model id={id} />
-      <OrbitControls />
+      }}
+    >
+      <Suspense fallback={<Loader />}>
+        <ambientLight intensity={1.5} castShadow={true} />
+        <directionalLight
+          position={[0, 20, 20]}
+          intensity={1}
+          castShadow={true}
+        />
+        <Model id={id} />
+        <OrbitControls />
+      </Suspense>
     </Canvas>
   );
 };

@@ -1,12 +1,25 @@
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import {
+  Html,
   // Html,
   useGLTF,
+  useProgress,
 } from "@react-three/drei";
 import { CatmullRomCurve3, Color, PCFShadowMap, Vector3 } from "three";
 import gsap from "gsap";
 // import { Button } from "./ui/button";
+
+function Loader() {
+  const { progress } = useProgress();
+  return (
+    <Html>
+      <div className="aspect-video whitespace-nowrap px-4 text-primary rounded-br-md bg-white flex justify-center items-center">
+        Loading... {progress.toFixed(0)} %
+      </div>
+    </Html>
+  );
+}
 
 const cameraMovement = [
   [0, 2.5, 0],
@@ -149,9 +162,12 @@ const BridgeViewer = ({ setSelectedId }: any) => {
       camera={{
         position: [0, 6, 0],
         rotation: [0, -Math.PI * 0.5, 0],
-      }}>
-      <ambientLight intensity={4} castShadow={true} />
-      <Model setSelectedId={setSelectedId} />
+      }}
+    >
+      <Suspense fallback={<Loader />}>
+        <ambientLight intensity={4} castShadow={true} />
+        <Model setSelectedId={setSelectedId} />
+      </Suspense>
       {/* <OrbitControls /> */}
     </Canvas>
   );
