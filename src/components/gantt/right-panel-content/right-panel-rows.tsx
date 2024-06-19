@@ -65,11 +65,14 @@ const RightPanelRows = ({
           Math.abs(duration) !== 1 ? "s" : ""
         }`,
       },
-      {
-        label: "Cost",
-        value: `${(Math.random() * 50 + 10).toFixed(2)} Lakhs`,
-      },
     ];
+
+    if (g.cost) {
+      tooltipData.push({
+        label: "Cost",
+        value: g.cost,
+      });
+    }
 
     if (g.progress) {
       tooltipData.push({ label: "Progress", value: `${g.progress}%` });

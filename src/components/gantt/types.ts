@@ -7,6 +7,7 @@ export interface Task {
   endDate: string;
 
   color?: string;
+  cost?: string;
   progress?: number;
 
   subTasks: Task[];
