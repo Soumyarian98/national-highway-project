@@ -66,7 +66,7 @@ const ChainageDescription = () => {
   const navigate = useNavigate();
 
   const selectedChainage = useMemo(() => {
-    return chainageData.find(chain => chain.id === selectedChainageId);
+    return chainageData.find((chain) => chain.id === selectedChainageId);
   }, [selectedChainageId]);
 
   return (
@@ -75,7 +75,7 @@ const ChainageDescription = () => {
         <div className="relative rounded-lg overflow-hidden">
           <img alt="map area" src="/map_area.png" />
           <TooltipProvider>
-            {chainageData.map(chain => (
+            {chainageData.map((chain) => (
               <Tooltip key={chain.id}>
                 <div
                   onClick={() => setSelectedChainageId(chain.id)}
@@ -84,7 +84,8 @@ const ChainageDescription = () => {
                     left: `${chain.point.left}%`,
                     top: `${chain.point.top}%`,
                     transform: "translate(-50%, -50%)",
-                  }}>
+                  }}
+                >
                   <TooltipTrigger asChild>
                     <div
                       className={clsx(
@@ -92,7 +93,8 @@ const ChainageDescription = () => {
                         selectedChainageId === chain.id
                           ? "bg-red-700 scale-150"
                           : "bg-blue-700"
-                      )}></div>
+                      )}
+                    ></div>
                   </TooltipTrigger>
                   <TooltipContent side="bottom">{chain.label}</TooltipContent>
                 </div>
@@ -111,12 +113,14 @@ const ChainageDescription = () => {
                   <Button
                     onClick={() => setSelectedChainageId(undefined)}
                     size="sm"
-                    variant="outline">
+                    variant="outline"
+                  >
                     Reset
                   </Button>
                   <Button
                     size="sm"
-                    onClick={() => navigate("/chainage-timeline")}>
+                    onClick={() => navigate("/chainage-timeline")}
+                  >
                     View Project Timeline
                   </Button>
                 </div>

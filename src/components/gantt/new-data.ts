@@ -7,6 +7,7 @@ export const constructionProgramData: Task[] = [
     title: "Foundation",
     startDate: "2024-06-11",
     endDate: "2024-07-30",
+    cost: "₹ 71,46,127.382",
     subTasks: [
       {
         id: "3",
@@ -14,6 +15,7 @@ export const constructionProgramData: Task[] = [
         title: "Layingout",
         startDate: "2024-06-11",
         endDate: "2024-06-11",
+        cost: "₹ 15,042.00",
         subTasks: [],
       },
       {
@@ -22,6 +24,7 @@ export const constructionProgramData: Task[] = [
         title: "Excavation",
         startDate: "2024-06-11",
         endDate: "2024-06-12",
+        cost: "₹ 2,16,331.23",
         subTasks: [],
       },
       {
@@ -30,6 +33,7 @@ export const constructionProgramData: Task[] = [
         title: "Preparation of Bed and Levelling Course",
         startDate: "2024-06-13",
         endDate: "2024-06-13",
+        cost: "₹ 6,41,977.068",
         subTasks: [],
       },
       {
@@ -38,6 +42,7 @@ export const constructionProgramData: Task[] = [
         title: "Preparation of Curtain wall and Stone Apron",
         startDate: "2024-06-13",
         endDate: "2024-06-14",
+        cost: "₹ 7,60,300.00",
         subTasks: [],
       },
       {
@@ -46,6 +51,7 @@ export const constructionProgramData: Task[] = [
         title: "Curing of PCC",
         startDate: "2024-06-14",
         endDate: "2024-06-24",
+        cost: "₹ 16,000.00",
         subTasks: [],
       },
       {
@@ -54,6 +60,7 @@ export const constructionProgramData: Task[] = [
         title: "Place reinforcement for bottom Slab",
         startDate: "2024-06-25",
         endDate: "2024-06-27",
+        cost: "₹ 46,00,151.584",
         subTasks: [],
       },
       {
@@ -62,6 +69,7 @@ export const constructionProgramData: Task[] = [
         title: "Formwork for the bottom slab",
         startDate: "2024-06-28",
         endDate: "2024-07-01",
+        cost: "₹ 61,145.00",
         subTasks: [],
       },
       {
@@ -70,6 +78,7 @@ export const constructionProgramData: Task[] = [
         title: "Cast bottom slab",
         startDate: "2024-07-02",
         endDate: "2024-07-02",
+        cost: "₹ 7,71,498.15",
         subTasks: [],
       },
       {
@@ -78,6 +87,7 @@ export const constructionProgramData: Task[] = [
         title: "Curing of bottom slab",
         startDate: "2024-07-03",
         endDate: "2024-07-11",
+        cost: "₹ 15,000.00",
         subTasks: [],
       },
       {
@@ -86,6 +96,7 @@ export const constructionProgramData: Task[] = [
         title: "Deshuttering of bottom slab",
         startDate: "2024-07-12",
         endDate: "2024-07-12",
+        cost: "₹ 48,682.35",
         subTasks: [],
       },
     ],
@@ -96,6 +107,7 @@ export const constructionProgramData: Task[] = [
     title: "Substructure",
     startDate: "2024-07-16",
     endDate: "2024-10-03",
+    cost: "₹ 11,10,982.5",
     subTasks: [
       {
         id: "14",
@@ -103,6 +115,7 @@ export const constructionProgramData: Task[] = [
         title: "Reinforcement of box wall",
         startDate: "2024-07-16",
         endDate: "2024-07-23",
+        cost: "₹ 10,982.5",
         subTasks: [],
       },
       {
@@ -111,6 +124,7 @@ export const constructionProgramData: Task[] = [
         title: "Shuttering for box wall first lift",
         startDate: "2024-07-19",
         endDate: "2024-07-23",
+        cost: "₹ 32,854.24",
         subTasks: [],
       },
       {
@@ -119,6 +133,7 @@ export const constructionProgramData: Task[] = [
         title: "Cast side walls (first lift)",
         startDate: "2024-07-24",
         endDate: "2024-07-24",
+        cost: "₹ 2,18,531.25",
         subTasks: [],
       },
       {
@@ -127,6 +142,7 @@ export const constructionProgramData: Task[] = [
         title: "Deshuttering of first lift",
         startDate: "2024-08-05",
         endDate: "2024-08-05",
+        cost: "₹ 18,325.26",
         subTasks: [],
       },
       {
@@ -135,6 +151,7 @@ export const constructionProgramData: Task[] = [
         title: "Curing of First lift",
         startDate: "2024-08-06",
         endDate: "2024-08-14",
+        cost: "₹ 5,289.25",
         subTasks: [],
       },
       {
@@ -143,6 +160,7 @@ export const constructionProgramData: Task[] = [
         title: "Shuttering of Second Lift",
         startDate: "2024-08-06",
         endDate: "2024-08-08",
+        cost: "₹ 32,854.24",
         subTasks: [],
       },
       {
@@ -151,6 +169,7 @@ export const constructionProgramData: Task[] = [
         title: "Cast second lift side walls",
         startDate: "2024-08-09",
         endDate: "2024-08-09",
+        cost: "₹ 2,18,531.25",
         subTasks: [],
       },
       {
@@ -159,6 +178,7 @@ export const constructionProgramData: Task[] = [
         title: "Deshuttering of Second lift",
         startDate: "2024-08-21",
         endDate: "2024-08-21",
+        cost: "₹ 18,325.26",
         subTasks: [],
       },
       {
@@ -167,6 +187,7 @@ export const constructionProgramData: Task[] = [
         title: "Curing of Second lift",
         startDate: "2024-08-22",
         endDate: "2024-08-30",
+        cost: "₹ 5,289.25",
         subTasks: [],
       },
       {
@@ -175,6 +196,7 @@ export const constructionProgramData: Task[] = [
         title: "Shuttering of Third Lift",
         startDate: "2024-08-22",
         endDate: "2024-08-26",
+        cost: "₹ 32,854.24",
         subTasks: [],
       },
       {
@@ -183,6 +205,7 @@ export const constructionProgramData: Task[] = [
         title: "Cast Third lift side walls",
         startDate: "2024-08-27",
         endDate: "2024-08-27",
+        cost: "₹ 2,18,531.25",
         subTasks: [],
       },
       {
@@ -191,6 +214,7 @@ export const constructionProgramData: Task[] = [
         title: "Deshuttering of Third lift",
         startDate: "2024-09-06",
         endDate: "2024-09-06",
+        cost: "₹ 18,325.26",
         subTasks: [],
       },
       {
@@ -199,6 +223,7 @@ export const constructionProgramData: Task[] = [
         title: "Curing of Third lift",
         startDate: "2024-09-09",
         endDate: "2024-09-17",
+        cost: "₹ 5,289.25",
         subTasks: [],
       },
       {
@@ -207,6 +232,7 @@ export const constructionProgramData: Task[] = [
         title: "Shuttering of Fourth Lift",
         startDate: "2024-09-09",
         endDate: "2024-09-11",
+        cost: "₹ 32,854.24",
         subTasks: [],
       },
       {
@@ -215,6 +241,7 @@ export const constructionProgramData: Task[] = [
         title: "Cast Fourth lift side walls",
         startDate: "2024-09-12",
         endDate: "2024-09-12",
+        cost: "₹ 2,18,531.25",
         subTasks: [],
       },
       {
@@ -223,6 +250,7 @@ export const constructionProgramData: Task[] = [
         title: "Deshuttering of Fourth lift",
         startDate: "2024-09-24",
         endDate: "2024-09-24",
+        cost: "₹ 18,325.26",
         subTasks: [],
       },
       {
@@ -231,6 +259,7 @@ export const constructionProgramData: Task[] = [
         title: "Curing of Fourth lift",
         startDate: "2024-09-25",
         endDate: "2024-10-03",
+        cost: "₹ 5,289.25",
         subTasks: [],
       },
     ],
@@ -241,6 +270,7 @@ export const constructionProgramData: Task[] = [
     title: "Superstructure",
     startDate: "2024-10-04",
     endDate: "2024-11-22",
+    cost: "₹ 19,63,681.125",
     subTasks: [
       {
         id: "32",
@@ -248,6 +278,7 @@ export const constructionProgramData: Task[] = [
         title: "Place staging for top slab",
         startDate: "2024-10-04",
         endDate: "2024-10-10",
+        cost: "₹ 18,361.892",
         subTasks: [],
       },
       {
@@ -256,6 +287,7 @@ export const constructionProgramData: Task[] = [
         title: "Shuttering for Top Slab",
         startDate: "2024-10-11",
         endDate: "2024-10-14",
+        cost: "₹ 35,268.25",
         subTasks: [],
       },
       {
@@ -264,6 +296,7 @@ export const constructionProgramData: Task[] = [
         title: "Reinforcement for Top slab",
         startDate: "2024-10-15",
         endDate: "2024-10-21",
+        cost: "₹ 10,42,248.045",
         subTasks: [],
       },
       {
@@ -272,6 +305,7 @@ export const constructionProgramData: Task[] = [
         title: "Casting of Top Slab",
         startDate: "2024-10-22",
         endDate: "2024-10-22",
+        cost: "₹ 8,35,180.5",
         subTasks: [],
       },
       {
@@ -280,6 +314,7 @@ export const constructionProgramData: Task[] = [
         title: "Deshuttering of Top Slab",
         startDate: "2024-11-01",
         endDate: "2024-11-01",
+        cost: "₹ 22,364.143",
         subTasks: [],
       },
       {
@@ -288,6 +323,7 @@ export const constructionProgramData: Task[] = [
         title: "Curing of Top Slab",
         startDate: "2024-11-04",
         endDate: "2024-11-22",
+        cost: "₹ 10,258.295",
         subTasks: [],
       },
     ],
@@ -298,6 +334,7 @@ export const constructionProgramData: Task[] = [
     title: "Construction of Approches and Road",
     startDate: "2024-11-23",
     endDate: "2025-11-02",
+    cost: "₹ 1,65,31,201.665",
     subTasks: [
       {
         id: "39",
@@ -305,6 +342,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction of Retaining wall-First Lift",
         startDate: "2024-11-06",
         endDate: "2024-11-17",
+        cost: "₹ 1,67,902.916",
         subTasks: [],
       },
       {
@@ -313,6 +351,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction of Retaining wall-Second",
         startDate: "2024-11-27",
         endDate: "2024-12-03",
+        cost: "₹ 1,67,902.916",
         subTasks: [],
       },
       {
@@ -321,6 +360,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction of Retaining wall-Third Lift",
         startDate: "2024-12-15",
         endDate: "2024-12-19",
+        cost: "₹ 1,67,902.916",
         subTasks: [],
       },
       {
@@ -329,6 +369,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction of Retaining wall-Fourth",
         startDate: "2024-10-08",
         endDate: "2024-11-14",
+        cost: "₹ 1,67,902.916",
         subTasks: [],
       },
       {
@@ -337,6 +378,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction of Retaining wall-Fifth Lift",
         startDate: "2024-11-25",
         endDate: "2024-12-02",
+        cost: "₹ 1,67,902.916",
         subTasks: [],
       },
       {
@@ -345,6 +387,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction of Retaining wall-Sixth Lift",
         startDate: "2024-12-11",
         endDate: "2024-12-18",
+        cost: "₹ 1,67,902.916",
         subTasks: [],
       },
       {
@@ -353,6 +396,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction of Retaining wall-Seventh",
         startDate: "2024-12-27",
         endDate: "2025-01-03",
+        cost: "₹ 1,67,902.916",
         subTasks: [],
       },
       {
@@ -361,6 +405,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction of Retaining wall-Eigth Lift",
         startDate: "2025-01-14",
         endDate: "2025-01-21",
+        cost: "₹ 1,67,902.916",
         subTasks: [],
       },
       {
@@ -369,6 +414,7 @@ export const constructionProgramData: Task[] = [
         title: "backfilling-1",
         startDate: "2024-07-04",
         endDate: "2024-08-23",
+        cost: "₹ 49,11,192.00",
         subTasks: [],
       },
       {
@@ -377,6 +423,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction RE Panel lift- 1 on either side",
         startDate: "2024-12-03",
         endDate: "2024-12-04",
+        cost: "₹ 1,24,320.00",
         subTasks: [],
       },
       {
@@ -385,6 +432,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction RE Panel lift- 2 on either side",
         startDate: "2024-12-04",
         endDate: "2024-12-05",
+        cost: "₹ 1,24,320.00",
         subTasks: [],
       },
       {
@@ -393,6 +441,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction RE Panel lift- 3 on either side",
         startDate: "2024-12-05",
         endDate: "2024-12-06",
+        cost: "₹ 1,24,320.00",
         subTasks: [],
       },
       {
@@ -401,6 +450,7 @@ export const constructionProgramData: Task[] = [
         title: "Construction RE Panel lift- 4 on either side",
         startDate: "2024-12-06",
         endDate: "2024-12-09",
+        cost: "₹ 1,24,320.00",
         subTasks: [],
       },
       {
@@ -409,6 +459,7 @@ export const constructionProgramData: Task[] = [
         title: "Backfilling-2 + Soil Filling",
         startDate: "2024-10-12",
         endDate: "2025-01-07",
+        cost: "₹ 49,11,192.00",
         subTasks: [],
       },
       {
@@ -417,6 +468,7 @@ export const constructionProgramData: Task[] = [
         title: "Laying of GSB",
         startDate: "2025-01-07",
         endDate: "2025-01-09",
+        cost: "₹ 3,36,474.00",
         subTasks: [],
       },
       {
@@ -425,6 +477,7 @@ export const constructionProgramData: Task[] = [
         title: "Laying of WMM",
         startDate: "2025-01-09",
         endDate: "2025-01-13",
+        cost: "₹ 4,32,682.5",
         subTasks: [],
       },
       {
@@ -433,6 +486,7 @@ export const constructionProgramData: Task[] = [
         title: "Crash Barrier Reinforcement+Driange Spout",
         startDate: "2025-01-14",
         endDate: "2025-01-20",
+        cost: "₹ 19,183.76",
         subTasks: [],
       },
       {
@@ -441,6 +495,7 @@ export const constructionProgramData: Task[] = [
         title: "Shuttering for Crash Barrier",
         startDate: "2025-01-21",
         endDate: "2025-01-22",
+        cost: "₹ 6,230.00",
         subTasks: [],
       },
       {
@@ -449,6 +504,7 @@ export const constructionProgramData: Task[] = [
         title: "Concreting for Crash barrier",
         startDate: "2025-01-23",
         endDate: "2025-01-24",
+        cost: "₹ 18,256.24",
         subTasks: [],
       },
       {
@@ -457,6 +513,7 @@ export const constructionProgramData: Task[] = [
         title: "Deshuttering of Crash Barrier",
         startDate: "2025-02-04",
         endDate: "2025-02-05",
+        cost: "₹ 3,000.00",
         subTasks: [],
       },
       {
@@ -465,6 +522,7 @@ export const constructionProgramData: Task[] = [
         title: "Laying of DBM",
         startDate: "2025-02-05",
         endDate: "2025-02-06",
+        cost: "₹ 3,25,861.305",
         subTasks: [],
       },
       {
@@ -473,6 +531,7 @@ export const constructionProgramData: Task[] = [
         title: "Laying of BC",
         startDate: "2025-02-06",
         endDate: "2025-02-07",
+        cost: "₹ 1,35,707.46",
         subTasks: [],
       },
       {
@@ -481,14 +540,7 @@ export const constructionProgramData: Task[] = [
         title: "Stone Pitching",
         startDate: "2025-02-07",
         endDate: "2025-02-11",
-        subTasks: [],
-      },
-      {
-        id: "62",
-        parentPath: ["38"],
-        title: "Project Completion",
-        startDate: "2025-02-11",
-        endDate: "2025-02-11",
+        cost: "₹ 35,90,919.072",
         subTasks: [],
       },
     ],

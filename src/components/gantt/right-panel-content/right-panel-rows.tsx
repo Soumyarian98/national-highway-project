@@ -32,7 +32,7 @@ const RightPanelRows = ({
   rowCollapseState,
   rangeType,
 }: RightPanelRowsProps) => {
-  return tasks.map(g => {
+  return tasks.map((g) => {
     const startGap =
       rangeType === "day"
         ? differenceInDays(startDay, new Date(g.startDate))
@@ -65,11 +65,14 @@ const RightPanelRows = ({
           Math.abs(duration) !== 1 ? "s" : ""
         }`,
       },
-      {
-        label: "Cost",
-        value: `${(Math.random() * 1000 + 100).toFixed(2)} Crore`,
-      },
     ];
+
+    if (g.cost) {
+      tooltipData.push({
+        label: "Cost",
+        value: g.cost,
+      });
+    }
 
     if (g.progress) {
       tooltipData.push({ label: "Progress", value: `${g.progress}%` });
@@ -101,7 +104,8 @@ const RightPanelRows = ({
                     "bg-primary text-sm text-primary-foreground px-2 py-1 rounded-md absolute top-1/2 -translate-y-1/2 overflow-hidden whitespace-nowrap text-ellipsis",
                     g.color ? `bg-${g.color}-500` : "bg-primary"
                   )}
-                  onClick={() => toast({ title: g.title })}>
+                  onClick={() => toast({ title: g.title })}
+                >
                   {g.title}
                 </div>
               </TooltipTrigger>
