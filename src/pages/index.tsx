@@ -144,7 +144,7 @@ const totalProjectCostData = {
 const Home = () => {
   return (
     <DashboardLayout contained>
-      <div className="flex flex-col justify-center items-center max-w-[900px] mx-auto">
+      <div className="flex flex-col justify-center items-center max-w-[1024px] mx-auto">
         <div className="grid grid-cols-12 gap-4">
           <Link to="/phase" className="block col-span-6">
             <Card className="w-full overflow-hidden relative cursor-pointer">

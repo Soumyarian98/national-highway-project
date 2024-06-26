@@ -12,8 +12,8 @@ const Sidebar = () => {
   return (
     <div className="h-full flex flex-col gap-4 border-r">
       <div className="px-4 py-6 flex justify-end">
-        <Button size="sm" variant="secondary" onClick={toggleSidebar}>
-          <X />
+        <Button size="icon" variant="secondary" onClick={toggleSidebar}>
+          <X size={20} />
         </Button>
       </div>
       <div className="px-4 pb-6">
@@ -21,9 +21,8 @@ const Sidebar = () => {
           <li>
             <Link
               className={clsx(
-                "flex items-center gap-x-3.5 py-2 px-2.5 rounded-lg hover:bg-muted transition-all duration-200",
-                currentPath === "/" &&
-                  "bg-muted-foreground text-primary-foreground hover:bg-muted-foreground"
+                "flex items-center gap-x-3.5 py-2 px-2.5 rounded-lg hover:bg-muted transition-all duration-200 text-sm",
+                currentPath === "/" && "bg-muted text-primary hover:bg-muted"
               )}
               to={"/"}>
               Project Overview
@@ -32,9 +31,9 @@ const Sidebar = () => {
           <li>
             <Link
               className={clsx(
-                "flex items-center gap-x-3.5 py-2 px-2.5 rounded-lg hover:bg-muted transition-all duration-200",
+                "flex items-center gap-x-3.5 py-2 px-2.5 rounded-lg hover:bg-muted transition-all duration-200 text-sm",
                 currentPath === "/timeline" &&
-                  "bg-muted-foreground text-primary-foreground hover:bg-muted-foreground"
+                  "bg-muted text-primary hover:bg-muted"
               )}
               to={"/timeline"}>
               Project Timeline

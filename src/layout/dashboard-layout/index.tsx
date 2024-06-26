@@ -4,7 +4,7 @@ import { useSidebar } from "@/hooks/use-sidebar";
 import { useLocation, useNavigate } from "react-router-dom";
 import { routeTitles } from "@/routes";
 import clsx from "clsx";
-import { Menu } from "lucide-react";
+import { LogOut, Menu } from "lucide-react";
 
 interface DashboardLayoutProps {
   contained?: boolean;
@@ -34,34 +34,34 @@ const DashboardLayout = ({
           <div
             className={clsx(
               "flex items-center gap-4 justify-between",
-              contained ? "w-[900px] mx-auto" : "w-full"
+              contained ? "w-[1024px] mx-auto" : "w-full"
             )}>
             <div className="flex items-center gap-4">
               {!isOpen && (
-                <Button size="sm" variant="secondary" onClick={toggleSidebar}>
+                <Button size="icon" variant="secondary" onClick={toggleSidebar}>
                   <Menu />
                 </Button>
               )}
-              <h1 className="text-3xl font-bold">
+              <h1 className="text-2xl font-bold">
                 {/*@ts-ignore*/}
                 {routeTitles[currentPath] ? routeTitles[currentPath] : title}
               </h1>
             </div>
             <Button
-              size="sm"
-              variant="default"
+              size="icon"
+              variant="secondary"
               onClick={() => {
                 localStorage.removeItem("isLoggedIn");
                 navigate("/login");
               }}>
-              Logout
+              <LogOut size={18} />
             </Button>
           </div>
         </div>
         <div
           className={clsx(
             "p-6",
-            contained ? "max-w-[900px] mx-auto lg:px-0" : "w-full"
+            contained ? "max-w-[1024px] mx-auto lg:px-0" : "w-full"
           )}>
           {children}
         </div>

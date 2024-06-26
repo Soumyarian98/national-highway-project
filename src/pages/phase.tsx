@@ -1,3 +1,4 @@
+import CrossSectionTypes from "@/components/cross-section-types";
 import DetailsTable from "@/components/details-table";
 import VideoPlayer from "@/components/video-player";
 import DashboardLayout from "@/layout/dashboard-layout";
@@ -72,7 +73,7 @@ const Phase = () => {
 
   return (
     <DashboardLayout contained>
-      <div className="max-w-[900px] mx-auto">
+      <div className="max-w-[1024px] mx-auto">
         <div>
           <div className="relative rounded-lg overflow-hidden">
             <div className="absolute left-[0] right-[54%] top-0 bottom-0 bg-black opacity-40 backdrop-blur-md cursor-not-allowed" />
@@ -102,7 +103,15 @@ const Phase = () => {
             </p>
           </div>
           <div>
-            <div className="flex justify-between items-center gap-4 mb-2">
+            <div className="flex justify-between items-center gap-4 mb-3">
+              <h2 className="text-lg capitalize font-bold">
+                Cross section types
+              </h2>
+            </div>
+            <CrossSectionTypes />
+          </div>
+          <div>
+            <div className="flex justify-between items-center gap-4 mb-3">
               <h2 className="text-lg capitalize font-bold">Project Demo</h2>
             </div>
             <VideoPlayer src="https://utfs.io/f/ad183797-0fb6-4879-b90c-260b7f71daca-e0m3b2.m4v" />
