@@ -6,6 +6,7 @@ import ChainageDescription from "./pages/chainage-description";
 import Phase from "./pages/phase";
 import ChainageDetails from "./pages/chainage/[id]";
 import ChainageTimeline from "./pages/chainage-timeline";
+import PhaseTimeline from "./pages/phase-timeline";
 
 const loader = async () => {
   if (!localStorage.getItem("isLoggedIn")) {
@@ -37,6 +38,11 @@ export const router = createBrowserRouter([
   {
     path: "/phase",
     element: <Phase />,
+    loader,
+  },
+  {
+    path: "/phase-timeline",
+    element: <PhaseTimeline />,
     loader,
   },
   {

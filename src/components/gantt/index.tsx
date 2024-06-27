@@ -35,7 +35,7 @@ const Gantt = ({ tasks: initialTasks }: GanttProps) => {
   const { expandAll, collapseAll, setOpenCloseState } = useRowState();
   const { rangeType, onRangeTypeChange } = useGanttState();
   const startDay = new Date("2024-05-25");
-  const endDay = new Date("2025-01-01");
+  const endDay = new Date("2026-01-01");
 
   useEffect(() => {
     setTasks(initialTasks);
@@ -82,9 +82,10 @@ const Gantt = ({ tasks: initialTasks }: GanttProps) => {
         <div className="flex items-center gap-2">
           <Select
             value={rangeType}
-            onValueChange={v =>
+            onValueChange={(v) =>
               onRangeTypeChange(v as "day" | "week" | "month")
-            }>
+            }
+          >
             <SelectTrigger className="w-[100px]">
               <SelectValue placeholder="Zoom Level" />
             </SelectTrigger>
