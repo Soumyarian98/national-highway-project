@@ -119,7 +119,7 @@ export const phaseOneItems: PhaseOneItem[] = [
   {
     label: "URP",
     slug: "urp",
-    isActive: true,
+    isActive: false,
     content: [
       {
         type: "image",
