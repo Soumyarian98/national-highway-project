@@ -1,0 +1,73 @@
+export const mainReportData: {
+  header?: string[];
+  rows: (string | string[] | string[][])[][];
+} = {
+  header: ["Sr. No", "Parameters/Issues", "Description"],
+  rows: [
+    ["1", "Length (km)", "104.250"],
+    ["2", "Total land acquired (ha)", "619.572"],
+    ["3", "Govt. land (ha)", "118.586"],
+    ["4", "Pvt. Land (ha)", "384.521"],
+    ["5", "Forest land (ha)*", "116.465"],
+    [
+      "6",
+      "Area under protected/ important or sensitive species of flora or fauna/Wildlife Sanctuary",
+      "The alignment does not pass through any wildlife sanctuary, protected area and its eco sensitive zone.",
+    ],
+    ["7", "No. of trees", "17000 Tentative"],
+    ["8", "Area under water bodies (ha)*", "5"],
+    ["9", "No. of structure to be impacted due to proposed alignment", "180"],
+    ["10", "No. of families", "180 Tentative"],
+    [
+      "11",
+      "No. of structure to be constructed",
+      [
+        ["Major Bridge", "07"],
+        ["Major Bridge (Elephant Underpass Also)", "03"],
+        ["Minor Bridge", "21"],
+        ["Minor Bridge (Canal)", "09"],
+        ["Minor Bridge (Elephant Underpass Also)", "01"],
+        ["MNB CUM UNDERPASS (Canal)", "03"],
+        ["ROB", "00"],
+        ["Vehicular Underpass", "10"],
+        ["Light Vehicular Underpass", "18"],
+        ["Small Vehicular Underpass (SVUP)", "26"],
+        ["Vehicular Overpass (VOP)", "02"],
+        ["Flyovers", "06"],
+        ["Elephant Underpass", "11"],
+        ["Box Culverts", "278"],
+        ["Pipe Culverts", "122"],
+        ["Viaduct", "01"],
+        ["PUP", "21"],
+      ],
+    ],
+    [
+      "12",
+      "Total water requirement",
+      "3500 KL/day. Water will be extracted from surface sources. The ground water will be abstracted for camp site after obtaining the permission from competent authority.",
+    ],
+    ["13", "Toll Plaza", "5"],
+    ["14", "Truck Bye lays", "2"],
+    ["15", "RoW (m)", "60"],
+    [
+      "16",
+      "Construction material",
+      [
+        "Coarse aggregate Cement (MT) - 128960",
+        "Coarse Sand (cum) - 1248",
+        "Coarse Agg. (cum) - 707200",
+        "Fine Agg. (cum) - 1414400",
+        "Steel (ton) - 4160",
+        "Bitumen (ton) - 15392000",
+        "Bitumen Emulsion (ton) - 1331200",
+        "Borrow Earth (cum) - 6656000",
+      ],
+    ],
+    [
+      "17",
+      "Connectivity",
+      "The projected road will connect to Bilaspur & Korba by Bilaspur-Urga-Pathalgaon Highway and Jharkhand border via Jashpur",
+    ],
+    ["18", "Project cost (cr.)", "3,150.47"],
+  ],
+};

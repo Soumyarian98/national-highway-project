@@ -28,7 +28,12 @@ const DetailsTable = ({ data }: Props) => {
           <TableHeader>
             <TableRow>
               {data.header.map((head, index) => (
-                <TableHead key={index}>{head}</TableHead>
+                <TableHead
+                  key={index}
+                  className="whitespace-nowrap text-ellipsis overflow-hidden"
+                >
+                  {head}
+                </TableHead>
               ))}
             </TableRow>
           </TableHeader>
