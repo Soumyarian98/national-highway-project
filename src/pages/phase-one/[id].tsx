@@ -2,6 +2,7 @@ import DetailsTable from "@/components/details-table";
 import { phaseOneItems } from "@/data/phase-one-items";
 import DashboardLayout from "@/layout/dashboard-layout";
 import { useParams } from "react-router-dom";
+import { ScrollRestoration } from "react-router-dom";
 
 const PhaseOneItems = () => {
   const id = useParams().id;
@@ -47,6 +48,7 @@ const PhaseOneItems = () => {
           return component;
         })}
       </div>
+      <ScrollRestoration />
     </DashboardLayout>
   );
 };
