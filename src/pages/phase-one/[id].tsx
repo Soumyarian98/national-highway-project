@@ -44,6 +44,7 @@ const PhaseOneItems = () => {
                   className="w-full h-auto"
                 />
               );
+              break;
           }
           return component;
         })}
