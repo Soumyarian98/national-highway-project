@@ -14,7 +14,6 @@ export const crossSectionImages = [
     name: "1B",
     urls: [
       "https://uploadthing-prod.s3.us-west-2.amazonaws.com/71b82834-706c-46bb-8e55-b1af6438aece-18x.png",
-      "https://uploadthing-prod.s3.us-west-2.amazonaws.com/75b2f2c9-faee-4026-9467-a7398ec05e0e-12ps.png",
     ],
   },
   {
@@ -68,6 +67,11 @@ export const crossSectionImages = [
     ],
   },
   {
+    id: "55",
+    name: "1F",
+    urls: ["https://utfs.io/f/e6f45938-8e1e-41fc-8fd8-784d81842502-191.png"],
+  },
+  {
     id: "6",
     name: "1F (A)",
     urls: [
@@ -94,6 +98,11 @@ export const crossSectionImages = [
     urls: [
       "https://uploadthing-prod.s3.us-west-2.amazonaws.com/9c0f8203-b9d2-47b7-980a-ab600bc7cddf-193.png",
     ],
+  },
+  {
+    id: "122",
+    name: "1I",
+    urls: ["https://utfs.io/f/ad235898-92d8-4842-be16-7baacde77a83-197.png"],
   },
   {
     id: "13",
