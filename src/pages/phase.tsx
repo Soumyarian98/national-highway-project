@@ -54,7 +54,7 @@ const Phase = () => {
                 Phase 1 Timeline
               </Button>
             </div>
-            <VideoPlayer src="https://utfs.io/f/ad183797-0fb6-4879-b90c-260b7f71daca-e0m3b2.m4v" />
+            <VideoPlayer src="https://utfs.io/f/e03db5a9-f778-4d86-8f90-99918670bf23-ih9mrf.m4v" />
           </div>
         </div>
       </div>
