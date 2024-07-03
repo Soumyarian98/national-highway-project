@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import ChainageDetails from "./chainage/[id]";
 import { useNavigate } from "react-router-dom";
 import VideoPlayer from "@/components/video-player";
+import BridgeSectionViewer from "@/components/bridge-section-viewer";
 
 const chainageData = [
   { id: "0", label: "18+600 - 18+700", point: { left: 2, top: 82 } },
@@ -68,6 +69,8 @@ const ChainageDescription = () => {
   const selectedChainage = useMemo(() => {
     return chainageData.find((chain) => chain.id === selectedChainageId);
   }, [selectedChainageId]);
+
+  console.log(selectedChainageId);
 
   return (
     <DashboardLayout contained>
@@ -126,7 +129,19 @@ const ChainageDescription = () => {
                 </div>
               </div>
               <div>
-                <BridgeWithFilter id={selectedChainageId!} />
+                {selectedChainageId === "17" ? (
+                  <BridgeSectionViewer
+                    url="https://utfs.io/f/da836bb2-5ca4-4f07-bbeb-f5cf4ad7bbdf-hb7n1.glb"
+                    cameraPosition={[0, 30, 10]}
+                  />
+                ) : selectedChainageId === "11" ? (
+                  <BridgeSectionViewer
+                    url="https://utfs.io/f/f320517c-1998-4155-ae7e-3138cb940fa5-f0ipwn.glb"
+                    cameraPosition={[0, 30, 10]}
+                  />
+                ) : (
+                  <BridgeWithFilter id={selectedChainageId!} />
+                )}
               </div>
             </div>
           ) : (
