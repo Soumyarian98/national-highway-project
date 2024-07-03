@@ -146,51 +146,51 @@ const ChainageDescription = () => {
               <h2 className="text-lg capitalize font-bold">MNB at 20+368</h2>
             </div>
             <VideoPlayer
-              segments={[
-                { label: "Excavation", startTime: 0, endTime: 18 },
-                { label: "PCC", startTime: 18, endTime: 25 },
-                {
-                  label: "Bar Reinforcement",
-                  startTime: 25,
-                  endTime: 36,
-                },
-                {
-                  label: "Concrete in Foundation",
-                  startTime: 36,
-                  endTime: 39,
-                },
-                {
-                  label: "Concrete in Substructure",
-                  startTime: 39,
-                  endTime: 44,
-                },
-                {
-                  label: "Concrete in Superstructure",
-                  startTime: 44,
-                  endTime: 50,
-                },
-                {
-                  label: "Re-wall",
-                  startTime: 50,
-                  endTime: 60,
-                },
-                {
-                  label: "Retaining wall",
-                  startTime: 60,
-                  endTime: 79,
-                },
-                {
-                  label: "Other Miscellaneous",
-                  startTime: 79,
-                  endTime: 90,
-                },
-                {
-                  label: "Roadworks",
-                  startTime: 90,
-                  endTime: 97,
-                },
-              ]}
-              src="https://utfs.io/f/7b5b554f-f6ed-4df1-9049-fdd49c4cc012-qy2kap.mp4"
+              // segments={[
+              //   { label: "Excavation", startTime: 0, endTime: 18 },
+              //   { label: "PCC", startTime: 18, endTime: 25 },
+              //   {
+              //     label: "Bar Reinforcement",
+              //     startTime: 25,
+              //     endTime: 36,
+              //   },
+              //   {
+              //     label: "Concrete in Foundation",
+              //     startTime: 36,
+              //     endTime: 39,
+              //   },
+              //   {
+              //     label: "Concrete in Substructure",
+              //     startTime: 39,
+              //     endTime: 44,
+              //   },
+              //   {
+              //     label: "Concrete in Superstructure",
+              //     startTime: 44,
+              //     endTime: 50,
+              //   },
+              //   {
+              //     label: "Re-wall",
+              //     startTime: 50,
+              //     endTime: 60,
+              //   },
+              //   {
+              //     label: "Retaining wall",
+              //     startTime: 60,
+              //     endTime: 79,
+              //   },
+              //   {
+              //     label: "Other Miscellaneous",
+              //     startTime: 79,
+              //     endTime: 90,
+              //   },
+              //   {
+              //     label: "Roadworks",
+              //     startTime: 90,
+              //     endTime: 97,
+              //   },
+              // ]}
+              src="https://utfs.io/f/18fc860e-7b89-4927-b78a-c6690e67aa75-1rue0c.m4v"
             />
           </div>
         )}
