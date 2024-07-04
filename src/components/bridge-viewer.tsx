@@ -4,18 +4,16 @@ import {
   Html,
   // Html,
   useGLTF,
-  useProgress,
 } from "@react-three/drei";
 import { CatmullRomCurve3, Color, PCFShadowMap, Vector3 } from "three";
 import gsap from "gsap";
-// import { Button } from "./ui/button";
+import { Loader2 } from "lucide-react";
 
 function Loader() {
-  const { progress } = useProgress();
   return (
-    <Html>
-      <div className="aspect-video whitespace-nowrap px-4 text-primary rounded-br-md bg-white flex justify-center items-center">
-        Loading... {progress.toFixed(0)} %
+    <Html center>
+      <div className="aspect-video whitespace-nowrap w-full h-full rounded-md px-4 flex justify-center items-center text-primary rounded-br-md bg-white">
+        <Loader2 className="h-6 w-6 animate-spin" />
       </div>
     </Html>
   );

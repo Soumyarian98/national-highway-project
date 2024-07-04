@@ -1,14 +1,14 @@
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Html, OrbitControls, useGLTF, useProgress } from "@react-three/drei";
+import { Html, OrbitControls, useGLTF } from "@react-three/drei";
 import { Color } from "three";
+import { Loader2 } from "lucide-react";
 
 function Loader() {
-  const { progress } = useProgress();
   return (
     <Html center>
       <div className="aspect-video whitespace-nowrap w-full h-full rounded-md px-4 flex justify-center items-center text-primary rounded-br-md bg-white">
-        Loading - {progress.toFixed(0)} %
+        <Loader2 className="h-6 w-6 animate-spin" />
       </div>
     </Html>
   );
@@ -16,6 +16,12 @@ function Loader() {
 
 function Model({ url }: { url: string }) {
   const { scene } = useGLTF(url);
+
+  useEffect(() => {
+    return () => {
+      useGLTF.clear(url);
+    };
+  }, []);
 
   return <primitive object={scene} />;
 }
