@@ -131,16 +131,18 @@ const ChainageDescription = () => {
               <div>
                 {selectedChainageId === "17" ? (
                   <BridgeSectionViewer
+                    key={Date.now()}
                     url="https://utfs.io/f/da836bb2-5ca4-4f07-bbeb-f5cf4ad7bbdf-hb7n1.glb"
                     cameraPosition={[0, 30, 10]}
                   />
                 ) : selectedChainageId === "11" ? (
                   <BridgeSectionViewer
+                    key={Date.now()}
                     url="https://utfs.io/f/f320517c-1998-4155-ae7e-3138cb940fa5-f0ipwn.glb"
                     cameraPosition={[0, 30, 10]}
                   />
                 ) : (
-                  <BridgeWithFilter id={selectedChainageId!} />
+                  <BridgeWithFilter key={Date.now()} id={selectedChainageId!} />
                 )}
               </div>
             </div>
